@@ -55,30 +55,46 @@ export default function page() {
         }
         fetchDiscoverData()
     },[selectedGenres, sortBy, selectedMediaType, pageNumber])
+    
     useEffect(()=>{
       setPageNumber(1);
     },[selectedGenres, sortBy, selectedMediaType])
+    
     useEffect(() => {
-
-      function handleClickOutside(event) {
-        if (sortDropDownMenu.current && !sortDropDownMenu.current.contains(event.target)) {
-          setOpenSort(false);
-        }
-      }
-      document.addEventListener("mousedown", handleClickOutside);
-      return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
-      };
-    }, [sortDropDownMenu, setOpenSort]);
-    useEffect(() => {
-      function handleClickOutside(event) {
-        if (genresSelectionMenu.current && !genresSelectionMenu.current.contains(event.target)) {
+      function handleMouseClickOutside(event:MouseEvent) {
+        if (genresSelectionMenu.current && !genresSelectionMenu.current.contains(event.target as Node)) {
           setOpenGenres(false);
         }
       }
-      document.addEventListener("mousedown", handleClickOutside);
+      function handleTouchOutside(event:TouchEvent){
+        if (genresSelectionMenu.current && !genresSelectionMenu.current.contains(event.target as Node)) {
+          setOpenGenres(false);
+        }
+      }
+      document.addEventListener("mousedown", handleMouseClickOutside);
+      document.addEventListener("touchstart", handleTouchOutside);
       return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
+        document.removeEventListener("mousedown", handleMouseClickOutside);
+        document.removeEventListener("touchstart", handleTouchOutside);
+      };
+    }, [sortDropDownMenu, setOpenSort]);
+    
+    useEffect(() => {
+      function handleMouseClickOutside(event:MouseEvent) {
+        if (genresSelectionMenu.current && !genresSelectionMenu.current.contains(event.target as Node)) {
+          setOpenGenres(false);
+        }
+      }
+      function handleTouchOutside(event:TouchEvent){
+        if (genresSelectionMenu.current && !genresSelectionMenu.current.contains(event.target as Node)) {
+          setOpenGenres(false);
+        }
+      }
+      document.addEventListener("mousedown", handleMouseClickOutside);
+      document.addEventListener("touchstart", handleTouchOutside);
+      return () => {
+        document.removeEventListener("mousedown", handleMouseClickOutside);
+        document.removeEventListener("touchstart", handleTouchOutside);
       };
     }, [genresSelectionMenu, setOpenGenres]);
 
