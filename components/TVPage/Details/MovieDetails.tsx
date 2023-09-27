@@ -1,6 +1,6 @@
 
 import RatingCircleHQ from "@/components/Common/RatingCircleHQ";
-import { MovieDetailsResponse } from "@/model/Response";
+import { TvDetailsResponse } from "@/model/Response";
 import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({ weight:'400', subsets:['latin'] })
@@ -16,7 +16,7 @@ function numbertodollars(number:number){
     }
 }
 
-export default function MovieDetails({data}:{data:MovieDetailsResponse}) {
+export default function MovieDetails({data}:{data:TvDetailsResponse}) {
   return (
     <>
         <div className="dark:bg-teal-700/90 bg-teal-100 xs:bg-none">
@@ -38,8 +38,8 @@ export default function MovieDetails({data}:{data:MovieDetailsResponse}) {
         <div className="container mx-auto flex p-2 gap-3 items-center justify-around my-8">
             <RatingCircleHQ rating={Math.round(data.vote_average*10)/10}/>
             <div className="flex flex-col gap-2 xs:text-lg font-bold">
-                <h1>Budget: {numbertodollars(data.budget)}</h1>
-                <h1>Revenue: {numbertodollars(data.revenue)}</h1>
+                <h1>Budget: {numbertodollars(0)}</h1>
+                <h1>Revenue: {numbertodollars(0)}</h1>
             </div>
         </div>
         

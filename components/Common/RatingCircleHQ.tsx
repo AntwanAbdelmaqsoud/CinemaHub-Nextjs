@@ -12,7 +12,7 @@ export default function RatingCircleHQ({rating}:{rating:number}) {
     
     useEffect(() => {
         if (canvasRef.current) {
-            const canvas = canvasRef.current;
+            const canvas:HTMLCanvasElement = canvasRef.current;
             const context = canvas.getContext('2d');  
             if (context) {
                 context.beginPath();
