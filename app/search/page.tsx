@@ -6,8 +6,8 @@ import {RiMovie2Line} from 'react-icons/ri'
 import { StandardResponse } from '@/model/Response';
 import Image from 'next/image';
 import Link from 'next/link';
-import RatingCircle from '@/components/RatingCircle';
-import Pagination from '@/components/Discover/Pagination';
+import RatingCircle from '@/components/Common/RatingCircle';
+import Pagination from '@/components/Common/Pagination';
 import posterBlank from '@/public/posterBlank.png'
 
 function DiscoverCards({title, poster_path,id, mediaType, rating} : {rating:number,mediaType:string, id:number, title:string,  poster_path:string}) {

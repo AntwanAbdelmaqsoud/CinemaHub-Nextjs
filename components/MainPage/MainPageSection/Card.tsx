@@ -1,8 +1,8 @@
 import Image from "next/image"
-import RatingCircle from "../RatingCircle"
 import Link from "next/link";
-import returnNameByID from "../utils/Genres";
+import returnNameByID from "../../../model/Genres";
 import posterBlank from "@/public/posterBlank.png"
+import RatingCircle from "@/components/Common/RatingCircle";
 
 function formatDate(dateString:string) {
   const date = new Date(dateString);

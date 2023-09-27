@@ -1,4 +1,5 @@
-import RatingCircleHQ from "@/components/RatingCircleHQ";
+
+import RatingCircleHQ from "@/components/Common/RatingCircleHQ";
 import { MovieDetailsResponse } from "@/model/Response";
 import { Montserrat } from "next/font/google";
 

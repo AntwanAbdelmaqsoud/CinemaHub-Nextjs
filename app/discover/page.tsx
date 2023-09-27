@@ -1,15 +1,15 @@
 'use client'
 
-import { MovieGenres, SeriesGenres } from '@/components/utils/Genres';
+import { MovieGenres, SeriesGenres } from '@/model/Genres';
 import {useState, useEffect, useRef} from 'react';
 import {FaTags,FaSort,FaUndo,FaTv, FaWindowClose } from 'react-icons/fa';
 import {RiMovie2Line} from 'react-icons/ri'
 import { StandardResponse } from '@/model/Response';
 import Image from 'next/image';
 import Link from 'next/link';
-import RatingCircle from '@/components/RatingCircle';
-import Pagination from '@/components/Discover/Pagination';
+import Pagination from '@/components/Common/Pagination';
 import posterBlank from '@/public/posterBlank.png'
+import RatingCircle from '@/components/Common/RatingCircle';
 
 
 function DiscoverCards({title, poster_path,id, mediaType, rating} : {rating:number,mediaType:string, id:number, title:string,  poster_path:string}) {

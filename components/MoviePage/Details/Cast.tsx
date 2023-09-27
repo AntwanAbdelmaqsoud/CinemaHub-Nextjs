@@ -1,6 +1,6 @@
 import { MovieCastResponse } from "@/model/Response";
 import Image from "next/image";
-import blankphoto from '../../../public/blankpp.png'
+import blankphoto from '@/public/blankpp.png'
 
 async function getMovieCast(id:number){
     const options = {

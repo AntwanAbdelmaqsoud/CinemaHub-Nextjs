@@ -1,7 +1,8 @@
+import RatingCircle from "@/components/Common/RatingCircle";
 import Image from "next/image"
 import Link from "next/link";
-import RatingCircle from "../RatingCircle"
-import returnNameByID from "../utils/Genres";
+
+import returnNameByID from "../../../model/Genres";
 
 export default function CarouselItem({src, genres, title, overview, vote_average,id, name, mediaType}:{mediaType:string, name:string, id:number, src:string, genres:number[], title:string, overview:string, vote_average:number}) {
   return (

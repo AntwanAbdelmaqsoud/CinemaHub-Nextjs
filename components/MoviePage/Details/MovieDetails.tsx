@@ -1,7 +1,6 @@
-import RatingCircleHQ from "@/components/RatingCircleHQ";
+import RatingCircleHQ from "@/components/Common/RatingCircleHQ";
 import { MovieDetailsResponse } from "@/model/Response";
 import { Montserrat } from "next/font/google";
-import Image from 'next/image'
 
 const montserrat = Montserrat({ weight:'400', subsets:['latin'] })
 const montserratBold = Montserrat({ weight:'700', subsets:['latin'] })
