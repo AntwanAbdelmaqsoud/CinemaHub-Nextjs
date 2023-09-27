@@ -38,7 +38,7 @@ export default function TopNavbar(){
     return(
     <>
     <div className="fixed top-0 z-[99] w-full">
-        <div id="navBar" className="bg-gray-200 dark:bg-slate-700 transition-all w-full h-14 top-0 flex items-center px-2 justify-between overflow-hidden">
+        <div id="navBar" className="backdrop-blur-md bg-gray-200/90 dark:bg-slate-700/90 transition-all w-full h-14 top-0 flex items-center px-2 justify-between overflow-hidden">
             <Link href="/">
                 <div className="flex items-center gap-1 hover:cursor-pointer">
                     <Image alt="light logo" src={popcorn} width={40} height={40}/>
