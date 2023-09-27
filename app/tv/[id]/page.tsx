@@ -8,10 +8,6 @@ import Seasons from "@/components/TVPage/Details/Seasons"
 import { Metadata, ResolvingMetadata } from 'next'
 
 
-
-
-
-
 async function getTVSeriesDetails(id:number){
   const options = {
     method: 'GET',

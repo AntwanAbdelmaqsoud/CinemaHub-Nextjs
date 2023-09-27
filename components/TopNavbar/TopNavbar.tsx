@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image';
-import nextlogo from '../../public/next.svg';
+import popcorn from '../../public/popcorn.png';
 import {FaSearch, FaMoon, FaSun, FaCompass, FaHome} from 'react-icons/fa';
 import {GiPerspectiveDiceSixFacesRandom} from 'react-icons/gi';
 import MenuHamburger from '@/components/MenuHamburger/MenuHamburger';
@@ -39,7 +39,15 @@ export default function TopNavbar(){
     <>
     <div className="fixed top-0 z-[99] w-full">
         <div id="navBar" className="bg-gray-200 dark:bg-slate-700 transition-all w-full h-14 top-0 flex items-center px-2 justify-between overflow-hidden">
-            <Image alt="light logo" src={nextlogo} width={100} height={50}/>
+            <Link href="/">
+                <div className="flex items-center gap-1 hover:cursor-pointer">
+                    <Image alt="light logo" src={popcorn} width={40} height={40}/>
+                    <div className="flex items-center gap-0.5">
+                        <h1 className="font-mono font-bold text-lg">Cinema </h1>
+                        <h1 className="font-mono font-bold text-lg">Hub</h1>
+                    </div>
+                </div>
+            </Link>
             <div className="md:flex items-center justify-evenly w-full hidden">
                 <span className="hover:text-teal-500 transition-all">
                     <Link href="/" className="flex items-center gap-1 font-semibold">

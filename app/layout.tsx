@@ -1,14 +1,13 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import TopNavbar from '../components/TopNavbar/TopNavbar'
-
 import Provider from './Provider'
 import Footer from '@/components/Footer/Footer'
 
 
 
 export const metadata: Metadata = {
-  title: 'Movie Library',
+  title: 'Cinema Hub',
   description: 'Movie library using TMDP API',
 }
 
